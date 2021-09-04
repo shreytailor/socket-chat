@@ -7,31 +7,31 @@
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
-.content {
+.modal .content {
     padding: 40px 40px;
 }
 
-h2 {
+.modal .content h2 {
     font-size: 1.4rem;
-    color: var(--theme-color);
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
-p {
+.modal .content p {
     margin-bottom: 20px;
 }
 
-input {
+.modal .content input {
     width: 100%;
     font-size: 1.1rem;
     padding: 10px 10px;
     margin-bottom: 20px;
 }
 
-button {
+.modal .content button {
     width: 100%;
     padding: 10px;
-    background-color: var(--theme-color);
+    background-color: var(--primary-color);
     color: white;
     font-weight: 600;
     border: none;
@@ -41,7 +41,7 @@ button {
     transition: all 0.1s;
 }
 
-button:hover {
+.modal .content button:hover {
     filter: brightness(1.2);
 }
 

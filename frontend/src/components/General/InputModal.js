@@ -14,7 +14,6 @@ function InputModal(props) {
             return;
         }
 
-        console.log(props.onSubmit);
         props.onSubmit(name);
     }
 
