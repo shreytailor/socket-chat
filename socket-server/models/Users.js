@@ -1,22 +1,18 @@
 class Users {
     constructor() {
-        this._userList = [];
+        this._userList = new Map();
     }
 
-    addUser(user) {
-        this._userList.push(user);
+    addUser(socket, user) {
+        this._userList.set(socket, user);
     }
 
-    removeUser(uuid) {
-        this._userList = this._userList.map((user) => {
-            if (user.uuid !== uuid) {
-                return user;
-            }
-        });
+    removeUser(socket) {
+        this._userList.delete(socket);
     }
 
     get list() {
-        return this._userList;
+        return Array.from(this._userList.values());
     }
 }
 
