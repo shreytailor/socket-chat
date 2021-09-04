@@ -11,7 +11,6 @@ function MessageHandler(io, socket) {
      */
     function OnNewMessage(payload) {
         io.emit("message:new", payload);
-        console.log("Received...", payload);
     }
 
     socket.on("message:new", OnNewMessage);

@@ -17,7 +17,6 @@ const registerMessageHandler = require("handlers/MessageHandler");
 // Registering the socket handlers.
 function onConnection(socket) {
     registerMessageHandler(io, socket);
-    console.log("Connected client...");
 }
 
 // Starting the server.
