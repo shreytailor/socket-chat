@@ -12,10 +12,12 @@ const io = require('socket.io')(httpServer, {
 });
 
 // Importing the socket handlers.
+const registerUserHandler = require("handlers/UserHandler.js");
 const registerMessageHandler = require("handlers/MessageHandler");
 
 // Registering the socket handlers.
 function onConnection(socket) {
+    registerUserHandler(io, socket);
     registerMessageHandler(io, socket);
 }
 
