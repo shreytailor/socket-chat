@@ -3,13 +3,13 @@ const Users = require("models/Users");
 const users = new Users();
 
 function UserHandler(io, socket) {
-    
-    // Adding new user's identity to the current list.
-    let user = new User(socket.handshake.query);
-    users.addUser(user);
 
-    // Update everyone about the newly connected user.
-    io.emit("users:update", connectedUsers);
+    function ConnectedUser(payload) {
+
+        // Add the connected user, and update everyone.
+        users.addUser(payload);
+        io.emit("users:update", users.list);
+    }
 
     function DisconnnectedUser() {
 
@@ -18,7 +18,8 @@ function UserHandler(io, socket) {
         io.emit("users:update", users.list);
     }
 
-    socket.on("disconnect", DisconnnectedUser);
+    socket.on("users:connect", ConnectedUser);
+    socket.on("users:disconnect", DisconnnectedUser);
 }
 
 module.exports = UserHandler;

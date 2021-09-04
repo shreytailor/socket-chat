@@ -4,11 +4,11 @@ class Users {
     }
 
     addUser(user) {
-        _userList.push(user);
+        this._userList.push(user);
     }
 
     removeUser(uuid) {
-        _userList = _userList.map((user) => {
+        this._userList = this._userList.map((user) => {
             if (user.uuid !== uuid) {
                 return user;
             }
@@ -16,7 +16,7 @@ class Users {
     }
 
     get list() {
-        return _userList;
+        return this._userList;
     }
 }
 
