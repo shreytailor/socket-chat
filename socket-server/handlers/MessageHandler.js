@@ -10,10 +10,10 @@ function MessageHandler(io, socket) {
      * @param {*} payload, the client payload
      */
     function OnNewMessage(payload) {
-        io.emit("message:new", payload);
+        io.emit("messages:new", payload);
     }
 
-    socket.on("message:new", OnNewMessage);
+    socket.on("messages:new", OnNewMessage);
 }
 
 module.exports = MessageHandler;
