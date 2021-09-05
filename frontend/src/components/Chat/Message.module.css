@@ -1,0 +1,25 @@
+.message {
+    max-width: 30vw;
+    min-width: 250px;
+}
+
+.message .info {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--grey-tertiary);
+}
+
+.message .content {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.message .sender {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.message .receiver {
+    background-color: var(--grey-primary);
+}

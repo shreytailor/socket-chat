@@ -1,5 +1,31 @@
 .inputContainer {
-    height: 10vh;
     background-color: var(--grey-primary);
     outline: 1px solid var(--grey-secondary);
+}
+
+.inputContainer form {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inputContainer form input {
+    flex: 1;
+    outline: 1px solid var(--grey-secondary);
+    border: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.inputContainer form button {
+    color: var(--grey-tertiary);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
 }

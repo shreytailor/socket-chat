@@ -1,0 +1,16 @@
+.messages {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 10px 0px;
+}
+
+.alignLeft {
+    margin-right: auto;
+}
+
+.alignRight {
+    margin-left: auto;
+}
