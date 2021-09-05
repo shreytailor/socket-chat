@@ -1,0 +1,5 @@
+.inputContainer {
+    height: 10vh;
+    background-color: var(--grey-primary);
+    outline: 1px solid var(--grey-secondary);
+}
