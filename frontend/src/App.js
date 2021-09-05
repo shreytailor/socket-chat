@@ -27,7 +27,8 @@ function App() {
 				<ChatComponent user={userInformation} clientSocket={clientSocket} /> :
 				<Modal 
 				title="Welcome To The Chat"  
-				description="Enter your name below to join the chat, and talk to others." 
+				description="Enter your name below to join the chat, and talk to others."
+				placeholder="Your Name"
 				buttonLabel="Join Server"
 				onSubmit={onModalSubmit}/>
 			}

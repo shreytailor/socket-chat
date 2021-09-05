@@ -23,7 +23,7 @@ function InputModal(props) {
                 <h2>{props.title}</h2>
                 <p>{props.description}</p>
                 <form onSubmit={formSubmitHandler}>
-                    <input type="text" value={name} onChange={inputChangeHandler}/>
+                    <input type="text" placeholder={props.placeholder} value={name} onChange={inputChangeHandler}/>
                     <button>{props.buttonLabel}</button>
                 </form>
             </div>
