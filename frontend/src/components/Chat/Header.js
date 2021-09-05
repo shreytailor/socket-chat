@@ -28,7 +28,7 @@ function Header(props) {
                     <ul>
                         {
                             props.activeUsers.map((user) => {
-                                return <li>{user.userName}</li>
+                                return <li key={user.uuid}>{user.userName}</li>
                             })
                         }
                     </ul>

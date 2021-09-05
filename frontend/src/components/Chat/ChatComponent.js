@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import GenerateUUID from 'utilities/GenerateUUID';
 import Header from 'components/Chat/Header';
 import Messages from 'components/Chat/Messages';
 import InputContainer from 'components/Chat/InputContainer';
@@ -13,7 +14,7 @@ function ChatComponent(props) {
 
     function onMessageSubmit(message) {
         clientSocket.emit("messages:new", {
-            uuid: Math.random(),
+            uuid: GenerateUUID(),
             text: message,
             sender: userData
         });

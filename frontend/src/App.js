@@ -4,17 +4,20 @@ import ChatComponent from 'components/Chat/ChatComponent';
 import Modal from 'components/General/InputModal';
 import { useState } from 'react';
 import { io } from 'socket.io-client';
+import GenerateUUID from 'utilities/GenerateUUID';
 
 const clientSocket = io(process.env.REACT_APP_SOCKET_SERVER);
 
 function App() {
 	const [userInformation, setUserInformation] = useState(null);
-
+	
 	function onModalSubmit(name) {
 		const user = {
-			uuid: Math.random(),	
+			uuid: GenerateUUID(),	
 			userName: name
 		};
+		
+		console.log(user);
 
 		setUserInformation(user);
 		clientSocket.emit("users:connect", user);

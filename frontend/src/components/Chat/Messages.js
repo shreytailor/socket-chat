@@ -15,9 +15,9 @@ function Messages(props) {
             {
                 messages.map((message) => {
                     if (userData.uuid === message.sender.uuid) {
-                        return <Message className={senderClassNames} message={message} sender/>
+                        return <Message key={message.uuid} className={senderClassNames} message={message} sender/>
                     } else {
-                        return <Message className={receiverClassNames} message={message} receiver/>
+                        return <Message key={message.uuid} className={receiverClassNames} message={message} receiver/>
                     }
                 })
             }
