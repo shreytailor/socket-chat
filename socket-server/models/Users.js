@@ -1,3 +1,6 @@
+/**
+ * This is a model class for Users, so it accumulates details about all the connected users.
+ */
 class Users {
     constructor() {
         this._userList = new Map();

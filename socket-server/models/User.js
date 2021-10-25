@@ -1,3 +1,6 @@
+/**
+ * This is a model class for a User.
+ */
 class User {
     constructor(connectionString) {
         this._uuid = connectionString.uuid;
