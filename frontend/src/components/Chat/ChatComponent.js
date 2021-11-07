@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import GenerateUUID from 'utilities/GenerateUUID';
 import Header from 'components/Chat/Header';
 import Messages from 'components/Chat/Messages';
+import GenerateUUID from 'utilities/GenerateUUID';
 import InputContainer from 'components/Chat/InputContainer';
 import styles from 'components/Chat/ChatComponent.module.css';
 
@@ -13,6 +13,11 @@ function ChatComponent(props) {
     const [messages, setMessages] = useState([]);
 
     function onMessageSubmit(message) {
+
+        /*
+        When user submits a new message into the chatroom, create this JSON object which contains
+        the user identity object, along with the message and a UUID for the message.
+        */
         clientSocket.emit("messages:new", {
             uuid: GenerateUUID(),
             text: message,
