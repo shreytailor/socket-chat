@@ -6,7 +6,7 @@ const httpServer = require('http').createServer();
 const io = require('socket.io')(httpServer, {
     cors: {
 
-        // Allowing CORS for all origins.
+        // Allowing CORS for access from all origins.
         origin: "*"
     }
 });
@@ -21,7 +21,7 @@ function onConnection(socket) {
     registerMessageHandler(io, socket);
 }
 
-// Starting the server.
+// Starting the server, and receiving connections with our custom callback.
 io.on("connection", onConnection);
 httpServer.listen(process.env.PORT);
 console.log(`Server is running on Port ${process.env.PORT}...`);
